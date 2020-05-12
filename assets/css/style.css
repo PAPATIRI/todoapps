@@ -2,7 +2,13 @@ body {
   background-color: plum;
 }
 .container {
-  background-color: gray;
+  /* background-color: gray; */
+  border: 1px solid gray;
   width: 360px;
   margin: 0 auto;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
 }
