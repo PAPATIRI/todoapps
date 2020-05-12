@@ -24,7 +24,7 @@ $("ul").on("click", "span", function (event) {
   // todo membuat hilangnya daftar todo dari tampilan dengan jeda 0.5s
   $(this)
     .parent()
-    .fadeOut(500, function () {
+    .fadeOut(200, function () {
       $(this).remove();
     });
   // todo agar yang di klik hanya objek tersrbut, tidak parent nya juga
@@ -40,6 +40,13 @@ $("input[type = 'text']").keypress(function (event) {
     //  membuak kolom form kosong lagi
     $(this).val("");
     // membuat li baru pada html dan tambahkan ke ul
-    $("ul").append("<li><span>X</span> " + todoText + "</li>");
+    $("ul").append(
+      "<li><span><i class='far fa-trash-alt'></i></span> " + todoText + "</li>"
+    );
   }
+});
+
+// todo arahkan dari klik ikon ke form
+$(".fa-plus-square").click(function () {
+  $("input[type='text']").fadeToggle();
 });
